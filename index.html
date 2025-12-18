@@ -1,188 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>VISMERA | Heritage Silks</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Vismera | Handwoven Sarees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background: #fffaf6;
-  color: #333;
-}
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #fffaf5;
+            color: #2c2c2c;
+            text-align: center;
+        }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: #ffffff;
-}
+        a {
+            text-decoration: none;
+        }
 
-.logo-img {
-  width: 200px;
-  max-width: 85%;
-  margin-bottom: 12px;
-}
+        /* Header */
+        header {
+            position: relative;
+            padding: 80px 20px 60px 20px;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            background: #fffaf5;
+        }
 
-.tagline {
-  font-size: 16px;
-  color: #666;
-}
+        /* Logo watermark */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('vismera-logo.png') no-repeat center;
+            background-size: 220px auto;
+            opacity: 0.08;
+            width: 220px;
+            height: 220px;
+            z-index: 0;
+        }
 
-/* SECTIONS */
-section {
-  padding: 45px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+        h1 {
+            font-size: 40px;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: normal;
+            position: relative;
+            z-index: 1;
+        }
 
-h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
-}
+        .highlight {
+            color: #b76e79; /* rose gold */
+        }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 22px;
-}
+        .tagline {
+            font-size: 18px;
+            color: #a67c7c; /* soft rose-gold */
+            font-style: italic;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
 
-.card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+        }
 
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
+        section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
 
-.card h3 {
-  margin: 14px 0 6px;
-  color: #333;
-}
+        /* Instagram link */
+        a.instagram-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background: #b76e79;
+            color: #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
-.card p {
-  font-size: 14px;
-  color: #555;
-}
+        a.instagram-link:hover {
+            background: #a55a66;
+        }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 11px 24px;
-  background: #7b9e8e; /* Lotus green */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 14px;
-}
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding: 25px;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
 
-/* ABOUT */
-.about {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-  line-height: 1.8;
-  font-size: 16px;
-  color: #444;
-}
-
-/* INSTAGRAM */
-.insta {
-  text-align: center;
-}
-
-.insta a {
-  color: #b76e79; /* Rose */
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  background: #f1ece6;
-  text-align: center;
-  padding: 25px 10px;
-  font-size: 14px;
-  color: #555;
-}
-</style>
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            .tagline {
+                font-size: 16px;
+            }
+            section p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 <header>
-  <img src="vismera-logo.png" alt="Vismera Logo" class="logo-img">
-  <div class="tagline">Tradition, thoughtfully woven</div>
+    <h1><span class="highlight">V</span>ISMERA</h1>
+    <div class="tagline">Where Timeless Weaves Meet Modern Grace</div>
 </header>
 
-<!-- COLLECTIONS -->
+<!-- About / Intro Section -->
 <section>
-<h2>Our Collections</h2>
-
-<div class="grid">
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x500" alt="Banarasi Silk Saree">
-    <h3>Banarasi Silks</h3>
-    <p>Elegant Banarasi sarees with lightweight comfort</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Enquire on WhatsApp</a>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x500" alt="Kanchivaram Silk Saree">
-    <h3>Kanchivaram Soft Silks</h3>
-    <p>Traditional beauty with a modern feel</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Enquire on WhatsApp</a>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x500" alt="Soft Silk Saree">
-    <h3>Soft Silks</h3>
-    <p>Perfect for everyday elegance</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Enquire on WhatsApp</a>
-  </div>
-
-</div>
+    <p>
+        Curated Banarasi, Kanchipuram & handcrafted sarees —  
+        directly from master weavers, made for today’s woman.
+    </p>
+    <a class="instagram-link" href="https://www.instagram.com/_vismera_/?hl=en" target="_blank">
+        Follow us on Instagram
+    </a>
 </section>
 
-<!-- ABOUT -->
+<!-- Optional Additional Sections -->
 <section>
-<h2>About VISMERA</h2>
-
-<p class="about">
-<strong>VISMERA</strong> brings thoughtfully sourced silk sarees that blend
-India’s rich weaving heritage with modern elegance.  
-Each piece is curated for comfort, grace, and timeless beauty — perfect for
-everyday wear and special moments.
-</p>
+    <h2 style="font-size:28px; margin-bottom:20px;">Our Craft</h2>
+    <p>
+        Each saree tells a story, woven with passion and skill passed down through generations.
+        We celebrate traditional handloom artistry with a modern touch for the contemporary woman.
+    </p>
 </section>
 
-<!-- INSTAGRAM -->
-<section class="insta">
-<h2>Follow Us on Instagram</h2>
-<p>
-<a href="https://instagram.com/vismera" target="_blank">@vismera</a>
-</p>
-<p>New arrivals • Styling inspiration • Customer stories</p>
+<section>
+    <h2 style="font-size:28px; margin-bottom:20px;">Why Choose Vismera?</h2>
+    <p>
+        Our commitment is to quality, authenticity, and sustainability. 
+        Every piece is handcrafted, ensuring a unique blend of heritage and elegance.
+    </p>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
-<p>📍 Kerala | 📦 Shipping across India</p>
-<p>📲 <a href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a></p>
+    © 2025 Vismera | Handwoven Elegance
 </footer>
 
 </body>
 </html>
+
+
